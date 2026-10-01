@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAPRAK WEEK 2 - CSS - SOAL 2</title>
+  <link rel="stylesheet" href="style2.css">
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Layout Utama Menggunakan CSS Grid -->
+  <div class="grid-container">
+    
+    <!-- 1. Header & Navbar (Flexbox) -->
+    <header class="header">
+      <div class="logo">Meng<span class="logo-highlight">Eak</span></div>
+      <nav class="navbar">
+        <a href="#" class="active">Beranda</a>
+        <a href="#">Portofolio</a>
+        <a href="#">Layanan</a>
+        <a href="#">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- 2. Sidebar -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Sosial Media</h3>
+      <ul class="sidebar-menu">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tiktok</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <!-- 3. Konten Utama -->
+    <main class="content">
+      <span class="content-badge">Selamat Datang</span>
+      <h2>Rahmadanis Danang Kumala</h2>
+      <p>Layout website ini dirancang untuk praktikum mata kuliah Perancangan dan Pemrograman Web.</p>
+      <p>Dengan menggunakan perpaduan teknik <strong>CSS Grid</strong> untuk kerangka tata letak utama 
+        dan <strong>Flexbox</strong> pada bagian navigasi header, serta penerapan <strong>Responsive Design</strong>.</p>
+      
+      <div class="card-grid">
+        <div class="feature-card">
+          <h4>Gambar Cuking</h4>
+          <img src="cuking_again.jpg" alt="Gambar Cuking" class="responsive-img">
+        </div>
+        <div class="feature-card">
+          <h4>Gambar Cuking Lagi</h4>
+          <img src="Instagram.jpg" alt="Gambar Cuking Lagi" class="responsive-img">
+        </div>
+      </div>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer class="footer">
+      <p>By Rahmadanis Danang Kumala - 103122400066</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

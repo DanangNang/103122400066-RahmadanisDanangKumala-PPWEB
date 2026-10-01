@@ -1,0 +1,272 @@
+/* Reset CSS & Prevent Horizontal Scroll Window */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Mencegah halaman geser ke kanan pada mobile */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: linear-gradient(135deg, #fdf4ff 0%, #fff7ed 50%, #faf5ff 100%);
+  color: #334155;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =================================================== */
+/* 1. Struktural Layout CSS Grid (Desktop Default)    */
+/* =================================================== */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 40px);
+  width: 100%;
+}
+
+/* =================================================== */
+/* 2. Header & Navigasi dengan Flexbox                 */
+/* =================================================== */
+.header {
+  grid-area: header;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 16px 28px;
+  border-radius: 16px;
+  border: 1px solid #f3e8ff;
+  box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #6b21a8;
+  letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+  color: #f97316;
+}
+
+.navbar {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #fff7ed;
+  color: #ea580c;
+}
+
+/* =================================================== */
+/* 3. Sidebar                                          */
+/* =================================================== */
+.sidebar {
+  grid-area: sidebar;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.04);
+}
+
+.sidebar-title {
+  font-size: 16px;
+  color: #5b21b6;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  margin-bottom: 8px;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 10px 14px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #faf5ff;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  transform: translateX(4px);
+}
+
+/* =================================================== */
+/* 4. Konten Utama (Main Content)                      */
+/* =================================================== */
+.content {
+  grid-area: content;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.04);
+  min-width: 0; /* Mencegah overflow grid item */
+}
+
+.content-badge {
+  display: inline-block;
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #ffedd5;
+  margin-bottom: 12px;
+}
+
+.content h2 {
+  font-size: 24px;
+  color: #1e1b4b;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.content p {
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+/* Cards & Image Responsiveness */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.feature-card {
+  background-color: #faf5ff;
+  border: 1px solid #f3e8ff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.feature-card h4 {
+  color: #7e22ce;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Styling Gambar Responsif */
+.responsive-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* =================================================== */
+/* 5. Footer                                           */
+/* =================================================== */
+.footer {
+  grid-area: footer;
+  background-color: #1e1b4b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =================================================== */
+/* 6. Responsive Design (Media Queries)               */
+/* =================================================== */
+
+/* Layout Tablet (1024px kebawah, mencakup iPad Pro & iPad Mini) */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 200px 1fr;
+    gap: 14px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Layout Mobile / Smartphone (768px kebawah) */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #faf5ff;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* Gambar menjadi 1 kolom ke bawah di HP */
+  }
+}
