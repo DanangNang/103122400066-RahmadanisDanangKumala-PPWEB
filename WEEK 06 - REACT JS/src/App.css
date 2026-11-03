@@ -1,0 +1,218 @@
+/* Reset & Base Styling */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1e; /* Dark theme background */
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Judul Utama */
+.main-title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* Summary Cards */
+.summary-container {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #212529; /* Teks gelap di background putih */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards (Form & Filter) */
+.card {
+  background-color: #ffffff;
+  color: #212529; /* Teks umum di card putih */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Heading di dalam Card (Contoh: "Tambah Peserta", "Pencarian & Filter") */
+.card h3 {
+  color: #1a1a1e; /* Warna gelap jelas, tidak nabrak */
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Input & Select */
+.input-control {
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  color: #212529; /* Teks input gelap & jelas */
+  font-size: 0.95rem;
+}
+
+.input-control:focus {
+  outline: none;
+  border-color: #0066cc;
+  background-color: #ffffff;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.filter-grid label {
+  color: #333333;
+  font-weight: 600;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-success {
+  background-color: #198754;
+  color: #ffffff;
+  padding: 6px 12px;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000000;
+  padding: 6px 12px;
+}
+
+.btn-edit {
+  background-color: #0dcaf0;
+  color: #000000;
+  padding: 6px 12px;
+  margin-left: 5px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 6px 12px;
+  margin-left: 5px;
+}
+
+.error-box {
+  padding: 10px 14px;
+  background-color: #f8d7da;
+  color: #842029;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  border: 1px solid #f5c2c7;
+}
+
+/* Tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #1a1a1e;
+}
+
+.th {
+  border-bottom: 2px solid #3d3d4e;
+  padding: 12px;
+  text-align: left;
+  background-color: #262630;
+  color: #ffffff;
+}
+
+.td {
+  border-bottom: 1px solid #2d2d3a;
+  padding: 12px;
+  color: #e0e0e0;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-hadir {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.badge-belum {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #adb5bd;
+  background-color: #262630;
+  border-radius: 8px;
+  font-size: 1.1em;
+}

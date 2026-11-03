@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 01 - Portal Informasi Praktikum</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.5; }
+        .section { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 4px; white-space: pre-wrap; }
+        .error { color: red; font-weight: bold; }
+        .info { color: blue; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Portal Informasi Praktikum</h1>
+
+    <!-- Bagian 1: State Lokal -->
+    <div class="section">
+        <h2>Catatan & Counter Praktikan</h2>
+        <p><strong>Waktu Halaman Dibuka:</strong> <span id="waktuAwal"></span></p>
+        <p>
+            <label for="inputCatatan">Catatan Praktikan:</label><br>
+            <textarea id="inputCatatan" rows="3" cols="50" placeholder="Tulis catatan di sini..."></textarea>
+        </p>
+        <p>
+            <span>Hitungan: <strong id="angkaHitungan">0</strong></span>
+            <button id="btnTambahHitungan">Tambah Hitungan</button>
+        </p>
+    </div>
+
+    <!-- Bagian 2: Pengumuman (XHR) -->
+    <div class="section">
+        <h2>Pengumuman Praktikum</h2>
+        <button id="btnMuatPengumuman">Muat Pengumuman</button>
+        <div id="statusPengumuman"></div>
+        <pre id="isiPengumuman">- Belum ada data -</pre>
+    </div>
+
+    <!-- Bagian 3: Direktori Peserta (Fetch) -->
+    <div class="section">
+        <h2>Direktori Peserta Praktikum</h2>
+        <label for="selectSumber">Pilih Sumber Data:</label>
+        <select id="selectSumber">
+            <option value="local">Mock Lokal</option>
+            <option value="external">JSONPlaceholder (Eksternal)</option>
+        </select>
+        <button id="btnAmbilPeserta">Ambil Peserta</button>
+
+        <div id="statusPeserta"></div>
+        <div id="infoDirektori"></div>
+        <ul id="daftarPeserta"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
